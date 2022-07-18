@@ -34,7 +34,8 @@
                             <p class="text-xl">Welcome <b>{{ auth()->user()->name }}</b></p>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="{{ route('login.destroy') }}">Log Out</a>
+                            <a href="{{ route('login.destroy') }}" class="nav-link active" aria-current="page" >Log
+                                Out</a>
                         </li>
                     @else
                         <li class="nav-item">
@@ -43,7 +44,7 @@
                         </li>
                         <li class="nav-item">
                             <a class="nav-link active" aria-current="page"
-                            href="{{ route('register.index') }}">Registrarse</a>
+                                href="{{ route('register.index') }}">Registrarse</a>
                         </li>
                     @endif
 

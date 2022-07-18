@@ -17,8 +17,14 @@ class SessionsController extends Controller
             return back()->withErrors([
                 'message' => 'The email or password is incorrect, please try again',
             ]);
-        } 
-        return redirect() -> to('/');
+        } else{
+            if(auth()->user()->role == 'admin'){
+                return redirect() -> route('admin.index');
+            }else{
+                return redirect() -> to('/');
+            }
+        }
+        
     }
 
     public function destroy() {
